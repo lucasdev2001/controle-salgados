@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/controle-salgados/static/css/main.31d6cfe0.css",
-    "main.js": "/controle-salgados/static/js/main.2f175e8d.js",
+    "main.css": "/controle-salgados/static/css/main.64d4e195.css",
+    "main.js": "/controle-salgados/static/js/main.334a5a8e.js",
     "static/js/787.aa299164.chunk.js": "/controle-salgados/static/js/787.aa299164.chunk.js",
-    "static/media/logo.svg": "/controle-salgados/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/bootstrap-icons.woff?": "/controle-salgados/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
+    "static/media/bootstrap-icons.woff2?": "/controle-salgados/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "index.html": "/controle-salgados/index.html",
-    "main.2f175e8d.js.map": "/controle-salgados/static/js/main.2f175e8d.js.map",
+    "main.64d4e195.css.map": "/controle-salgados/static/css/main.64d4e195.css.map",
+    "main.334a5a8e.js.map": "/controle-salgados/static/js/main.334a5a8e.js.map",
     "787.aa299164.chunk.js.map": "/controle-salgados/static/js/787.aa299164.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.2f175e8d.js"
+    "static/css/main.64d4e195.css",
+    "static/js/main.334a5a8e.js"
   ]
 }
