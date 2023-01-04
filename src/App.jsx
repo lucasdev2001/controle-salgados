@@ -10,8 +10,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setSalgados(JSON.parse(localStorage.getItem("salgados")));
-    setIsLoading(false);
+    if(localStorage.getItem('salgados') !== null){
+      setSalgados(JSON.parse(localStorage.getItem("salgados")));
+      setIsLoading(false);
+    }
+    
   }, []);
 
   useEffect(() => {
@@ -125,7 +128,7 @@ function App() {
         <div className="container-fluid">
           <h1 className="text-center mt-3 mb-3">Controle Salgados</h1>
           <div className="row row-cols">
-            {salgados.map((e, index) => {
+            {salgados && salgados.map((e, index) => {
               return (
                 <Salgado
                   salgado={e.salgado}
