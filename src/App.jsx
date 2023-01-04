@@ -68,8 +68,8 @@ function App() {
 
   return (
     <>
-      <div className="bg-light">
-        <nav className="navbar navbar-ligh bg-light">
+      <div className="bg-dark text-light p-3">
+        <nav className="navbar navbar-dark bg-dark">
           <div className="container-fluid">
             <button
               className="navbar-toggler"
@@ -85,7 +85,7 @@ function App() {
           </div>
         </nav>
         <div className="collapse m-1" id="navbarToggler">
-          <div className="bg-light">
+          <div className="">
             <div className="container-fluid">
               <div className="row row-cols text-center">
                 <div className="mb-3">
