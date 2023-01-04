@@ -10,11 +10,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if(localStorage.getItem('salgados') !== null){
+    if (localStorage.getItem("salgados") !== null) {
       setSalgados(JSON.parse(localStorage.getItem("salgados")));
       setIsLoading(false);
     }
-    
   }, []);
 
   useEffect(() => {
@@ -33,7 +32,7 @@ function App() {
   };
   const handleAdicionarSalgado = (e) => {
     setSalgados((current) => [...current, inputs]);
-    setIsLoading(false)
+    setIsLoading(false);
   };
 
   const onAddQuantidade = (e) => {
@@ -68,27 +67,32 @@ function App() {
 
   return (
     <>
-      <div className="bg-dark text-light p-3">
-        <nav className="navbar navbar-dark bg-dark">
+      <div className="bg-dark text-light p-2 rounded-5 m-1">
+        <nav className="navbar navbar-dark bg-dark rounded-5">
           <div className="container-fluid">
             <button
-              className="navbar-toggler"
+              className="navbar-toggler bg-primary"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"
               aria-controls="navbarToggler"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              data-keyboard="false"
+              data-backdrop="static"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
           </div>
         </nav>
-        <div className="collapse m-1" id="navbarToggler">
+        <div className="collapse m-1 rounded-5 p-3" id="navbarToggler">
           <div className="">
             <div className="container-fluid">
               <div className="row row-cols text-center">
                 <div className="mb-3">
+                  <label className="d-block fs-1 text-start mb-3">
+                    Nome do salgado:
+                  </label>
                   <input
                     type="text"
                     className="form-control fs-1 mb-3"
@@ -125,21 +129,21 @@ function App() {
         </div>
       </div>
       <main>
-        <div className="container-fluid">
-          <h1 className="text-center mt-3 mb-3">Controle Salgados</h1>
+        <div className="container-fluid mt-3">
           <div className="row row-cols">
-            {salgados && salgados.map((e, index) => {
-              return (
-                <Salgado
-                  salgado={e.salgado}
-                  quantidade={e.quantidade}
-                  onAdd={onAddQuantidade}
-                  onSub={onSubQuantidade}
-                  id={index}
-                  key={index}
-                />
-              );
-            })}
+            {salgados &&
+              salgados.map((e, index) => {
+                return (
+                  <Salgado
+                    salgado={e.salgado}
+                    quantidade={e.quantidade}
+                    onAdd={onAddQuantidade}
+                    onSub={onSubQuantidade}
+                    id={index}
+                    key={index}
+                  />
+                );
+              })}
           </div>
         </div>
       </main>
