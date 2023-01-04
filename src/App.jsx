@@ -33,7 +33,7 @@ function App() {
   };
   const handleAdicionarSalgado = (e) => {
     setSalgados((current) => [...current, inputs]);
-    console.log(salgados);
+    setIsLoading(false)
   };
 
   const onAddQuantidade = (e) => {
